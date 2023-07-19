@@ -32,10 +32,10 @@ public class SchoolClass {
     public String findTopper(){
         int max = -1;
         String topper = "";
-        for(Student i:this.studentsList){
-            if(i.getStudentsAverage()>max){
-                topper = i.getName();
-                max = i.getStudentsAverage();
+        for(Student student:this.studentsList){
+            if(student.getStudentsAverage()>max){
+                topper = student.getName();
+                max = student.getStudentsAverage();
             }
         }
         return topper;
