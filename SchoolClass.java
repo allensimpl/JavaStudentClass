@@ -7,7 +7,7 @@ public class SchoolClass {
     SchoolClass(String division, String classTeacher,ArrayList<Student> students){
         this.division = division;
         this.classTeacher = classTeacher;
-        studentsList.addAll(students);
+        this.studentsList.addAll(students);
     }
     SchoolClass(){
 

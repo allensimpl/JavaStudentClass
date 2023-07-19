@@ -11,8 +11,8 @@ public class Main {
         students1.add(s3);
         SchoolClass class1 = new SchoolClass("5A","Reeba",students1);
         System.out.println(s1.getStudentsAverage());
-        System.out.println("Topper: "+class1.findTopper());
-        System.out.println("Average: "+class1.getClassAverage());
+        System.out.println("Class 1 Topper: "+class1.findTopper());
+        System.out.println("Class 2 Average: "+class1.getClassAverage());
 
         Student s4  = new Student("David","Aluva",21,100,99,100);
         Student s5 = new Student("Aaron","Fort Kochi",27,100,100,54);
@@ -22,7 +22,8 @@ public class Main {
         students2.add(s5);
         students2.add(s6);
         SchoolClass class2 = new SchoolClass("5B","Riya",students2);
-
+        System.out.println("Class 1 Topper"+class1.findTopper());
+        System.out.println("Class 2 Topper"+class2.getClassAverage());
         ArrayList<SchoolClass> allClasses= new ArrayList<SchoolClass>();
         allClasses.add(class1);
         allClasses.add(class2);
