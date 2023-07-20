@@ -4,9 +4,9 @@ public class Student {
     private String name;
     private String address;
     private Integer age;
-    private Integer marks1;
-    private Integer marks2;
-    private Integer marks3;
+    private Float marks1;
+    private Float marks2;
+    private Float marks3;
 
     public String getName() {
         return name;
@@ -32,31 +32,31 @@ public class Student {
         this.age = age;
     }
 
-    public Integer getMarks1() {
-        return marks1;
+    public Float getMarks1() {
+        return this.marks1;
     }
 
-    public void setMarks1(Integer marks1) {
+    public void setMarks1(Float marks1) {
         this.marks1 = marks1;
     }
 
-    public Integer getMarks2() {
-        return marks2;
+    public Float getMarks2() {
+        return this.marks2;
     }
 
-    public void setMarks2(Integer marks2) {
+    public void setMarks2(Float marks2) {
         this.marks2 = marks2;
     }
 
-    public Integer getMarks3() {
+    public Float getMarks3() {
         return marks3;
     }
 
-    public void setMarks3(Integer marks3) {
+    public void setMarks3(Float marks3) {
         this.marks3 = marks3;
     }
 
-    public Student(String name, String address, Integer age, Integer marks1, Integer marks2, Integer marks3){
+    public Student(String name, String address, Integer age, Float marks1, Float marks2, Float marks3){
         this.name = name;
         this.address = address;
         this.age = age;
@@ -67,10 +67,10 @@ public class Student {
     public Student(){
 
     }
-    public Integer getStudentsAverage(){
-        return (this.marks1+this.marks2+this.marks3)/3;
+    public Float getStudentsAverage(){
+        return ((float)this.marks1+(float)this.marks2+(float)this.marks3)/3F;
     }
-    public Integer getStudentSum(){
+    public Float getStudentSum(){
         return (this.marks1+this.marks2+this.marks3);
     }
 }

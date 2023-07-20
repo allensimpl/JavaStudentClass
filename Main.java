@@ -2,9 +2,10 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Student s1 = new Student("Johnny","Aluva",21,93,96,80);
-        Student s2 = new Student("Aaron","Fort Kochi",22,91,90,88);
-        Student s3 = new Student("Abel","Alapuzha",24,65,85,99);
+        Student s1 = new Student("Johnny","Aluva",21,93F,96F,80F);
+        Student s2 = new Student("Aaron","Fort Kochi",22,91F,90F,88F);
+        Student s3 = new Student("Abel","Alapuzha",24,65F,85F,99F);
+        Student s3 = new Student("Abel","Alapuzha",24,65F,85F,99F);
         ArrayList<Student> students1 = new ArrayList<Student>();
         students1.add(s1);
         students1.add(s2);

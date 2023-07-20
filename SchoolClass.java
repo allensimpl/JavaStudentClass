@@ -4,7 +4,7 @@ public class SchoolClass {
     private String division;
     private String classTeacher;
     public ArrayList<Student> studentsList= new ArrayList<Student>();
-    SchoolClass(String division, String classTeacher,ArrayList<Student> students){
+    public SchoolClass(String division, String classTeacher,ArrayList<Student> students){
         this.division = division;
         this.classTeacher = classTeacher;
         this.studentsList.addAll(students);
@@ -30,7 +30,7 @@ public class SchoolClass {
         this.studentsList.add(sampleStudent);
     }
     public String findTopper(){
-        int max = -1;
+        Float max = Float.MIN_VALUE;
         String topper = "";
         for(Student student:this.studentsList){
             if(student.getStudentsAverage()>max){
@@ -40,12 +40,12 @@ public class SchoolClass {
         }
         return topper;
     }
-    public Integer getClassAverage(){
-        int sum=0;
+    public Float getClassAverage(){
+        Float sum=0F;
         int count=0;
         for(Student i:this.studentsList){
-            sum+=i.getStudentsAverage();
-            count+=1;
+            sum+=(Float)i.getStudentsAverage();
+            count+=1F;
         }
         return sum/count;
     }

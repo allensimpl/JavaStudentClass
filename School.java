@@ -2,12 +2,12 @@ import java.util.ArrayList;
 
 public class School {
     private String schoolName;
-    ArrayList<SchoolClass> schoolsClasses = new ArrayList<SchoolClass>();
-    School(String schoolName,ArrayList<SchoolClass> schoolsClasses){
+    public ArrayList<SchoolClass> schoolsClasses = new ArrayList<SchoolClass>();
+    public School(String schoolName,ArrayList<SchoolClass> schoolsClasses){
         this.schoolName = schoolName;
         this.schoolsClasses.addAll(schoolsClasses);
     }
-    public int schoolAverage(){
+    public Float schoolAverage(){
         int count=0;
         int sum=0;
         for(SchoolClass school:schoolsClasses){
@@ -16,11 +16,11 @@ public class School {
                 count++;
             }
         }
-        return sum/count;
+        return sum/(float)count;
     }
     public String highestClass(){
         String topClass="";
-        int max = Integer.MIN_VALUE;
+        Float max = Float.MIN_VALUE;
         for(SchoolClass classes:this.schoolsClasses){
             if(classes.getClassAverage()>max){
                 max = classes.getClassAverage();
